@@ -1,0 +1,16 @@
+# private data and logs
+app.log
+*.log
+cookies.txt
+
+# downloads and build output
+downloads/
+build/
+dist/
+release/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
