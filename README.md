@@ -100,7 +100,7 @@ Choose the format and quality, press **Download**, watch the progress. The file 
 - ✂️ **Whole video or just a part**: chapters, multiple segments, or a custom time range
 - 👁️ **Built-in preview** with draggable start/end sliders
 - 🎚️ **Format and quality** selection before downloading
-- 🍪 **Browser cookies** option (Firefox, Chrome, Edge, Brave, Opera, Vivaldi) for content that needs a login
+- 🍪 **Login via cookies** (Firefox, Chrome, Edge, Brave, Opera, Vivaldi, or your own `cookies.txt`) for 18+ and restricted videos, see the [guide](#-cookies-18-and-restricted-videos)
 - 🌍 **Three interface languages**: Russian, Ukrainian, English
 - 🎨 **Adaptive design**: the theme changes with the selected service
 - 🪟 **Standalone Windows app** (`.exe`) or run from source
@@ -139,6 +139,32 @@ Then open **http://127.0.0.1:5000** in your browser.
 
 On Windows you can also double-click `run.bat` (or `launch.vbs` to start without a console window).
 `create_shortcut.vbs` makes a desktop shortcut for you.
+
+---
+
+## 🍪 Cookies (18+ and restricted videos)
+
+Some YouTube videos (18+, age-restricted and similar) can only be downloaded by a logged-in account. That is what the **login dropdown next to the Search button** is for. Setting it up takes about two minutes and only has to be done once.
+
+<details>
+<summary><b>👉 Click to open the step-by-step guide</b></summary>
+
+<br/>
+
+**What you need:** a browser extension called **[Get cookies.txt LOCALLY](https://chromewebstore.google.com/search/Get%20cookies.txt%20LOCALLY)** and a YouTube account that is **verified and has no age restrictions**.
+
+1. Open an **incognito (private) window**. In your extensions settings, allow *Get cookies.txt LOCALLY* to run in incognito.
+2. Log in to your YouTube account **inside that incognito window**.
+3. On the YouTube home page, replace the address with `https://www.youtube.com/robots.txt` and open it. It is a plain text page, so YouTube won't refresh your cookies in the background.
+4. Click the **Get cookies.txt LOCALLY** icon and export the cookies. You get a file named `cookies.txt`.
+5. Put `cookies.txt` in the **main app folder**, next to `app.py`, `run.bat` and the other files.
+6. **Close the incognito window** and don't open that session again. Otherwise YouTube may replace the cookies and the file will stop working.
+7. In the app, choose the login option in the dropdown next to **Search**.
+
+> ⚠️ **Keep `cookies.txt` private.** Anyone who has this file can act as your account. Never send it to anyone and never upload it to GitHub (it is already listed in `.gitignore`).
+> It is safer to use a separate account instead of your main one, because downloading with an account can put that account at risk.
+
+</details>
 
 ---
 
