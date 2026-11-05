@@ -208,7 +208,7 @@ Clipper/
 - [x] SoundCloud support
 - [x] Standalone Windows release (`.exe`)
 - [ ] TikTok photo carousels (pick slides or all)
-- [ ] More output formats (GIF, MKV and other popular video/audio formats)
+- [x] More output formats (GIF, MKV and other popular video/audio formats)
 - [ ] Download queue and playlists
 
 ---
